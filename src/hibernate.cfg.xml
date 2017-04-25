@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">Lucia.vd3.m</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/musicweb</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.default_catalog">musicweb</property>
+		<property name="hibernate.default_schema">musicweb</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.search.autoregister_listeners">true</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.validator.apply_to_ddl">false</property>
+		<property name="hibernate.enable_lazy_load_no_trans">true</property>
+		<property name="hibernate.search.default.directory_provider">filesystem</property>
+		<property name="hibernate.search.default.indexBase">E:\hbncache</property>
+		<property name="hibernate.search.lucene_version">LUCENE_CURRENT</property>
+		
+		<mapping class="entity.Category" />
+		<mapping class="entity.Lyric" />
+		<mapping class="entity.Playlist" />
+		<mapping class="entity.Comments" />
+		<mapping class="entity.Song" />
+		<mapping class="entity.Country" />
+		<mapping class="entity.Singer" />
+		<mapping class="entity.CommentAlbum" />
+		<mapping class="entity.Album" />
+		<mapping class="entity.Users" />
+		<mapping class="entity.Viewcounter" />
+		<mapping class="entity.Viewalbum"/>
+		<mapping class="entity.Viewsong"/>
+		<mapping class="entity.LikeSong"/>
+		<mapping class="entity.LikeAlbum"/>
+		<mapping class="entity.Follow"/>	
+		<mapping class="entity.Menu"/>
+		<mapping class="entity.Submenu"/>
+		<mapping class="entity.Secondsubmenu"/>
+		
+	</session-factory>
+</hibernate-configuration>
